@@ -1,3 +1,6 @@
+There is my solution test task by startup-summer.paralect.com
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
