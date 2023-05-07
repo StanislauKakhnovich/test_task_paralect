@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
-import './Paginate.css';
+import '../styles/PaginateVacancies.css';
 
-const items = [...Array(33).keys()];
+// const items = [...Array(33).keys()];
+const items = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
 
 function Items({ currentItems }) {
   return (
