@@ -17,10 +17,12 @@ const RequestVacancies = async () => {
         const response = await fetch (VACANCY_URL, settings);
         const dataVacancies = await response.json();
         console.log(dataVacancies);
+        return dataVacancies
 
     } catch (e) {
         console.log(e);
     }
+    
 }
 
 export default RequestVacancies;
