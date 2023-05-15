@@ -1,28 +1,22 @@
-import { BrowserRouter, Routes, Route, Link, useParams, Outlet } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 
-// function Product(){
-//     // получаем параметры
-//     const params = useParams();
-//     const prodId = params.id;
-//     const phone = phones.find(p=>p.id == prodId);
-//     if(phone===undefined)
-//         return <h2>Товар не найден</h2>;
-//     else
-//         return <h2>Товар {phone.name}</h2>;
-// }
-let x = [{'id':'1','profession':'x', 'firm_name': 'nothing', 'payment_from': '0', 'payment_to': '0', 'currency':'0', 'type_of_work': {'title': 'full day'}, 'town': {'title': 'Minsk'}},
-{'id':'2','profession':'y', 'firm_name': 'nothing', 'payment_from': '0',  'payment_to': '0', 'currency':'0', 'type_of_work': {'title': 'full day'}, 'town': {'title': 'Minsk'}}];
 
-function VacancyCard (items) {
+function VacancyCard ({dataVacancies}) {
     const params = useParams();
     const prodId = params.id;
     console.log(prodId);
 
-        const item = x.find(p=>p.id == prodId);
-        console.log(item);
+        const vacancy = dataVacancies.find(p=>p.id == prodId);
+        console.log(vacancy);
+        let details = {__html: vacancy.vacancyRichText};
+
+ 
         return (
-            //<div></div>
-            <div>{item}</div>
+            <>
+            <div>{vacancy.profession}</div>
+            <div> {vacancy.profession} {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} до {vacancy.payment_to} {vacancy.currency} - {vacancy.type_of_work.title} {vacancy.town.title}</div>
+            <div dangerouslySetInnerHTML={details} />
+            </>
         );
   
 

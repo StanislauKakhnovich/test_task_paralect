@@ -1,9 +1,9 @@
 import {client_id, client_secret, proxy_server_url } from './RequestPasswordAuth';
-
+let refresh_token = JSON.parse(localStorage.getItem('dataTokens')).refresh_token;
 const RequestUpdateAccessToken = async () => {
-    let refresh_token = JSON.parse(localStorage.getItem('dataTokens')).refresh_token;
+    
     const UPDATE_ACCESS_TOKEN_URL = `${proxy_server_url}/oauth2/refresh_token/?refresh_token=${refresh_token}&client_id=${client_id}&client_secret=${client_secret}`;
-
+    // GET https://api.superjob.ru/2.0/oauth2/refresh_token/?refresh_token=c907a&client_id=1&client_secret=yourAppSecretKey
     const settings = {
         method: 'GET',
         headers: {

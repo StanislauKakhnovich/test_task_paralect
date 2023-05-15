@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, useParams, Outlet, NavLink } from 'react-router-dom';
-import ReactPaginate from 'react-paginate';
+
+import {  NavLink } from 'react-router-dom';
+// import ReactPaginate from 'react-paginate';
 import '../styles/PaginateVacancies.css';
+// import IconStar from './IconStar';
+import '../images/Star1.png';
+import Star1 from "../images/Star_1.svg"
 
-//const items = [...Array(33).keys()];
-//var items = {items};
+//const vacancys = [...Array(33).keys()];
+//var vacancys = {vacancys};
 
-// function Items({ currentItems }) {
-//   console.log (currentItems);
+// function vacancys({ currentvacancys }) {
+//   console.log (currentvacancys);
 //     return (
-//       <div className="items">
-//       {currentItems && currentItems.map((item) => (
-//         <div key={item.id}>
-//           <h3 > {item.profession}  </h3>
+//       <div className="vacancys">
+//       {currentvacancys && currentvacancys.map((vacancy) => (
+//         <div key={vacancy.id}>
+//           <h3 > {vacancy.profession}  </h3>
 //         </div>
 //       ))}
 //         </div>
@@ -21,39 +24,39 @@ import '../styles/PaginateVacancies.css';
 
 
 
-// function PaginatedVacancies({items, itemsPerPage }) {
-//   // We start with an empty list of items.
-//   const [currentItems, setCurrentItems] = useState(null);
+// function PaginatedVacancies({vacancys, vacancysPerPage }) {
+//   // We start with an empty list of vacancys.
+//   const [currentvacancys, setCurrentvacancys] = useState(null);
 //   const [pageCount, setPageCount] = useState(0);
-//   // Here we use item offsets; we could also use page offsets
+//   // Here we use vacancy offsets; we could also use page offsets
 //   // following the API or data you're working with.
-//   const [itemOffset, setItemOffset] = useState(0);
+//   const [vacancyOffset, setvacancyOffset] = useState(0);
 
 //   useEffect(() => {
-//     // Fetch items from another resources.
-//     const endOffset = itemOffset + itemsPerPage;
-//     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-//     setCurrentItems(items.slice(itemOffset, endOffset));
-//     setPageCount(Math.ceil(items.length / itemsPerPage));
-//   }, [itemOffset, itemsPerPage]);
+//     // Fetch vacancys from another resources.
+//     const endOffset = vacancyOffset + vacancysPerPage;
+//     console.log(`Loading vacancys from ${vacancyOffset} to ${endOffset}`);
+//     setCurrentvacancys(vacancys.slice(vacancyOffset, endOffset));
+//     setPageCount(Math.ceil(vacancys.length / vacancysPerPage));
+//   }, [vacancyOffset, vacancysPerPage]);
 
 //   // Invoke when user click to request another page.
 //   const handlePageClick = (event) => {
-//     const newOffset = event.selected * itemsPerPage % items.length;
+//     const newOffset = event.selected * vacancysPerPage % vacancys.length;
 //     console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
-//     setItemOffset(newOffset);
+//     setvacancyOffset(newOffset);
 //   };
-//   console.log(currentItems);
-//    let listVacancies =  currentItems && currentItems.map((item) => 
-//     <div key={item.id}>
-//       <h3 > {item.profession}  </h3>
+//   console.log(currentvacancys);
+//    let listVacancies =  currentvacancys && currentvacancys.map((vacancy) => 
+//     <div key={vacancy.id}>
+//       <h3 > {vacancy.profession}  </h3>
 //     </div>
 //     )
 
 //   return (
 //     <>
-//       {/* <Items currentItems={currentItems} /> */}
-//       <div className="items">
+//       {/* <vacancys currentvacancys={currentvacancys} /> */}
+//       <div className="vacancys">
 //         {listVacancies}
 //       </div>
 //       <ReactPaginate
@@ -63,14 +66,14 @@ import '../styles/PaginateVacancies.css';
 //         marginPagesDisplayed={2}
 //         pageCount={pageCount}
 //         previousLabel="< previous"
-//         pageClassName="page-item"
+//         pageClassName="page-vacancy"
 //         pageLinkClassName="page-link"
-//         previousClassName="page-item"
+//         previousClassName="page-vacancy"
 //         previousLinkClassName="page-link"
-//         nextClassName="page-item"
+//         nextClassName="page-vacancy"
 //         nextLinkClassName="page-link"
 //         breakLabel="..."
-//         breakClassName="page-item"
+//         breakClassName="page-vacancy"
 //         breakLinkClassName="page-link"
 //         containerClassName="pagination"
 //         activeClassName="active"
@@ -87,24 +90,34 @@ import '../styles/PaginateVacancies.css';
 //   return <h2>Товар № {prodId}</h2>;
 // }
 
-function PaginatedVacancies({items}) {
-  console.log (items);
-  const listItems = items.map((item, index) =>
-    // const params = useParams();
-    // const prodId = params.item.profession;
+function PaginatedVacancies({dataVacancies}) {
+
+  const listVacancies = dataVacancies.map((vacancy, index) =>
+
     <li
-      key={item.id}
+      key={vacancy.id}
     >
-      <NavLink to={`/${item.id}`}>{item.profession}</NavLink>
-      {index} {item.profession} {item.firm_name} з/п от {item.payment_from} {item.currency} до {item.payment_to} {item.currency} - {item.type_of_work.title} {item.town.title}
+      <div>
+        <NavLink to={`/${vacancy.id}`}>{vacancy.profession}</NavLink>
+        {/* <IconStar          
+        name={'document'}
+         color={'#5E96FC'}
+         size={'32'}
+         className={'button-left-panel'}
+         /> */}
+         <img key={vacancy.id} src={Star1}  title='star' alt='title'></img>
+        
+      </div>
+      
+      {index} {vacancy.profession} {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} до {vacancy.payment_to} {vacancy.currency} - {vacancy.type_of_work.title} {vacancy.town.title}
     </li>
   );
 
   return (
-    <ul>{listItems}</ul>
+    <ul>{listVacancies}</ul>
   );
 }
-//  
+
 
 export default PaginatedVacancies;
 
