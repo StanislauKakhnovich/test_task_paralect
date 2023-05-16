@@ -109,7 +109,9 @@ function PaginatedVacancies({dataVacancies}) {
         
       </div>
       
-      {index} {vacancy.profession} {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} до {vacancy.payment_to} {vacancy.currency} - {vacancy.type_of_work.title} {vacancy.town.title}
+      <div>
+        {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} {vacancy.paiment_to!='0'&&`до ${vacancy.payment_to} ${vacancy.currency}`}  - {vacancy.type_of_work.title} {vacancy.town.title}
+        </div>
     </li>
   );
 

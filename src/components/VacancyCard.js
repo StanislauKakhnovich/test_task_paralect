@@ -14,7 +14,7 @@ function VacancyCard ({dataVacancies}) {
         return (
             <>
             <div>{vacancy.profession}</div>
-            <div> {vacancy.profession} {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} до {vacancy.payment_to} {vacancy.currency} - {vacancy.type_of_work.title} {vacancy.town.title}</div>
+            <div> {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} до {vacancy.payment_to} {vacancy.currency} - {vacancy.type_of_work.title} {vacancy.town.title}</div>
             <div dangerouslySetInnerHTML={details} />
             </>
         );
