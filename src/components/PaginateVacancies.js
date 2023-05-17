@@ -1,12 +1,10 @@
 
 import {  NavLink } from 'react-router-dom';
-import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, React } from 'react';
 
 // import ReactPaginate from 'react-paginate';
 import '../styles/PaginateVacancies.css';
 // import IconStar from './IconStar';
-import '../images/Star1.png';
 import Star1 from "../images/Star_1.svg";
 import Star2 from "../images/Star_2.svg";
 
@@ -129,12 +127,10 @@ export function subtractFromSelected (vacancy) {
   localStorage.setItem('vacancy', stringData);
 }
 
+
 function PaginatedVacancies({dataVacancies}) {
   const [starClick, setStarClick] = useState(true);
-  // function starRender ()  {
-  //   setStarClick(true);
-  // }
-
+  
   const listVacancies = dataVacancies.map((vacancy, index) =>
     
     <li
@@ -157,10 +153,19 @@ function PaginatedVacancies({dataVacancies}) {
          
         
       </div>
-      
-      <div>
-        {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} {vacancy.paiment_to!='0'&&`до ${vacancy.payment_to} ${vacancy.currency}`}  - {vacancy.type_of_work.title} {vacancy.town.title}
-      </div>
+
+      {
+        vacancy.payment_to
+        ?
+        <div>
+        {vacancy.firm_name} з/п от {vacancy.payment_from} до {vacancy.payment_to} {vacancy.currency}  - {vacancy.type_of_work.title} {vacancy.town.title}
+        </div>
+        :
+        <div>
+        {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency}   - {vacancy.type_of_work.title} {vacancy.town.title}
+        </div>
+      }
+     
     </li>
   );
 

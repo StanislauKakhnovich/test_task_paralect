@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import Star2 from "../images/Star_1.svg"
+import { useState, React } from 'react';
+import { subtractFromSelected } from './PaginateVacancies';
+import Star2 from "../images/Star_2.svg";
 
 function Selected () {
+    const [starClick, setStarClick] = useState(true);
     let selectedVacancy = JSON.parse(localStorage.getItem('vacancy'));
     const listSelectedVacancy = selectedVacancy.map((vacancy, index) =>
 
@@ -9,8 +12,21 @@ function Selected () {
       key={vacancy.id}
     >
       <NavLink to={`/${vacancy.id}`}>{vacancy.profession}</NavLink>
-      <img key={vacancy.id} src={Star2}  title='star' alt='title'></img>
-      {index} {vacancy.profession} {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} до {vacancy.payment_to} {vacancy.currency} - {vacancy.type_of_work.title} {vacancy.town.title}
+
+        <img key={vacancy.id} src={Star2}  title='star' alt='title' onClick={()=>{subtractFromSelected(vacancy); setStarClick(!starClick)}} ></img>
+
+        {
+        vacancy.payment_to
+        ?
+        <div>
+        {vacancy.firm_name} з/п от {vacancy.payment_from} до {vacancy.payment_to} {vacancy.currency}  - {vacancy.type_of_work.title} {vacancy.town.title}
+        </div>
+        :
+        <div>
+        {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency}   - {vacancy.type_of_work.title} {vacancy.town.title}
+        </div>
+      }
+    
     </li>
   );
 
