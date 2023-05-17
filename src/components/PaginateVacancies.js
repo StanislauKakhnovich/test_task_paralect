@@ -1,10 +1,14 @@
 
 import {  NavLink } from 'react-router-dom';
+import React from 'react';
+import { useState, useEffect } from 'react';
+
 // import ReactPaginate from 'react-paginate';
 import '../styles/PaginateVacancies.css';
 // import IconStar from './IconStar';
 import '../images/Star1.png';
-import Star1 from "../images/Star_1.svg"
+import Star1 from "../images/Star_1.svg";
+import Star2 from "../images/Star_2.svg";
 
 //const vacancys = [...Array(33).keys()];
 //var vacancys = {vacancys};
@@ -90,10 +94,49 @@ import Star1 from "../images/Star_1.svg"
 //   return <h2>Товар № {prodId}</h2>;
 // }
 
+export function checkSelected (vacancy) {
+  let vacancyStorage = localStorage.getItem('vacancy');
+  if (!vacancyStorage) return true;
+  else {
+    let arrVacancy = JSON.parse(vacancyStorage);
+    return arrVacancy.find((item)=>vacancy.id===item.id); 
+  }
+}
+
+
+
+export function addToSelected (vacancy)  {
+  
+  let arrVacancy = [];
+  let vacancyStorage = localStorage.getItem('vacancy');
+  if (vacancyStorage) {
+    arrVacancy = JSON.parse(vacancyStorage);
+    arrVacancy = [...arrVacancy, vacancy];
+  } 
+  else {
+    arrVacancy = [...arrVacancy, vacancy];
+  }
+  let stringData = JSON.stringify(arrVacancy)
+  localStorage.setItem('vacancy', stringData);
+  
+}
+
+export function subtractFromSelected (vacancy) {
+  let vacancyStorage = localStorage.getItem('vacancy');
+  let arrVacancy = JSON.parse(vacancyStorage);
+  arrVacancy = arrVacancy.filter((item)=>item.id!==vacancy.id)
+  let stringData = JSON.stringify(arrVacancy)
+  localStorage.setItem('vacancy', stringData);
+}
+
 function PaginatedVacancies({dataVacancies}) {
+  const [starClick, setStarClick] = useState(true);
+  // function starRender ()  {
+  //   setStarClick(true);
+  // }
 
   const listVacancies = dataVacancies.map((vacancy, index) =>
-
+    
     <li
       key={vacancy.id}
     >
@@ -105,13 +148,19 @@ function PaginatedVacancies({dataVacancies}) {
          size={'32'}
          className={'button-left-panel'}
          /> */}
-         <img key={vacancy.id} src={Star1}  title='star' alt='title'></img>
+         {
+          checkSelected(vacancy)?
+          <img key={vacancy.id} src={Star2}  title='star' alt='title' onClick={()=>{subtractFromSelected(vacancy); setStarClick(!starClick)}} ></img>
+          :
+          <img key={vacancy.id} src={Star1}  title='star' alt='title' onClick={()=>{addToSelected(vacancy); setStarClick(!starClick)}} ></img>
+         }
+         
         
       </div>
       
       <div>
         {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency} {vacancy.paiment_to!='0'&&`до ${vacancy.payment_to} ${vacancy.currency}`}  - {vacancy.type_of_work.title} {vacancy.town.title}
-        </div>
+      </div>
     </li>
   );
 

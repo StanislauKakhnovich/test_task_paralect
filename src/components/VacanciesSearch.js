@@ -4,13 +4,14 @@ import RequestPasswordAuth from './RequestPasswordAuth';
 import RequestUpdateAccessToken from './RequestUpdateAccessToken';
 import KeyWordArea from './KeyWordArea';
 import Filters from './Filters'; 
+import '../styles/VacanciesSearch.css';
 
 function getInfo () {
   let data = localStorage.getItem('dataTokens');
   console.log(JSON.parse(data));
 }
 
-function VacanciesSearch({dataVacancies,getParametryFind, message, getVacancies }) {
+function VacanciesSearch({dataVacancies,getParametryFind, message, payment_from, payment_to, catalogues, getVacancies }) {
 
   return (
     <>
@@ -18,9 +19,13 @@ function VacanciesSearch({dataVacancies,getParametryFind, message, getVacancies 
     <button onClick={RequestUpdateAccessToken}>UPDATE_ACCESS_TOKEN</button>
     <button onClick={getInfo}>LocalStorage</button>
     <div>{message}</div>
-    <Filters getParametryFind={getParametryFind} message={message}/>
-    <KeyWordArea getParametryFind={getParametryFind}/>
-    <PaginatedVacancies dataVacancies={dataVacancies}  itemsPerPage={10}/>
+    <div className='Main'>
+      <Filters getParametryFind={getParametryFind} message={message}/>
+      <div className='RightSideMain'>
+        <KeyWordArea getParametryFind={getParametryFind} payment_from={payment_from} payment_to={payment_to} catalogues={catalogues}/>
+        <PaginatedVacancies dataVacancies={dataVacancies}  itemsPerPage={10}/>
+      </div>
+    </div>
     </>
   );
 }

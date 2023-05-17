@@ -51,19 +51,36 @@ function PagesRouters () {
         return setParametry(arrParametry);
     } 
     const [dataVacancies, setDataVacancies] = useState([]);
-    const [isRequest, setIsRequest] = useState(false); 
+    const [isNothing, setIsNothing] = useState(false); 
     
     const getVacancies = async () => {
-        let dataRespond = await RequestVacancies(parametry);
-        let newVacancies = dataRespond.objects
-        setDataVacancies(newVacancies);
-        console.log(newVacancies.length);
-        if(newVacancies.length==0) setIsRequest(true);
-        else if (newVacancies.length>0) setIsRequest(false);
+
+            let dataRespond = await RequestVacancies(parametry);
+            let newVacancies = dataRespond.objects;
+            setDataVacancies(newVacancies);
+            console.log(parametry);
+            console.log(newVacancies.length);
+            if (newVacancies.length===0) setIsNothing(true);
+            // if (newVacancies.length!==0) return <div id="preloader" className="hidden" aria-busy='true' aria-label='Загрузка данных, пожалуйста подождите.' role={'progressbar'}></div>
+        
+
+            // else if (newVacancies.length===0) return <div>По вашему запросу ничего не обнаружено</div>
+
+            
+            // if(newVacancies.length==0) setIsRequest(true);
+            // else if (newVacancies.length>0) setIsRequest(false);
 
       }
 
+    //   try{
+    //     const response = await fetch (VACANCY_URL, settings);
+    //     const dataVacancies = await response.json();
+    //     console.log(dataVacancies);
+    //     return dataVacancies
 
+    // } catch (e) {
+    //     console.log(e);
+    // }
 
 
 
@@ -96,15 +113,22 @@ function PagesRouters () {
 
 
    
-    if((dataVacancies.length===0&&!isRequest) || (parametry[4]==='onClick'&&!isRequest)) {
-        getVacancies();
-        parametry[4]='noClick';
-        return <div id="preloader" className="hidden" aria-busy='true' aria-label='Загрузка данных, пожалуйста подождите.' role={'progressbar'}></div>
+    //if((dataVacancies.length===0&&!isRequest) || (parametry[4]==='onClick'&&!isRequest)) {
+    if (isNothing) {
+        return <div>По вашему запросу ничего не обнаружено</div>
+    }
+    if(dataVacancies.length===0 || parametry[4]==='onClick') {    
+
+            getVacancies();
+            parametry[4]='noClick';
+            return <div id="preloader" className="hidden" aria-busy='true' aria-label='Загрузка данных, пожалуйста подождите.' role={'progressbar'}></div>
+        
+
     }
         
 
 
-    // if (dataVacancies.length===0&&isRequest) {
+    // if (isNothing) {
     //     return <div>По вашему запросу ничего не обнаружено</div>
     // }
     
@@ -114,9 +138,9 @@ function PagesRouters () {
                 <div>
                   <Nav />
                   <Routes>
-                    <Route path="/" element={<VacanciesSearch message={parametry[0]} dataVacancies={dataVacancies} getParametryFind={getParametryFind} getVacancies={getVacancies} />}></Route>
+                    <Route path="/" element={<VacanciesSearch message={parametry[0]}  payment_from={parametry[1]} payment_to={parametry[2]} catalogues={parametry[3]} dataVacancies={dataVacancies} getParametryFind={getParametryFind} getVacancies={getVacancies} />}></Route>
                     <Route path="/:id" element={<VacancyCard dataVacancies={dataVacancies}/>} />
-                    <Route path="/selected" element={<Selected selectedVacancy={selectedVacancy}/>}></Route>
+                    <Route path="/selected" element={<Selected/>}></Route>
                    </Routes>
                 </div>
             </BrowserRouter>

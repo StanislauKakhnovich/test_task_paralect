@@ -1,0 +1,7 @@
+.FlexArea {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 5px;
+    margin-top: 0;
+}

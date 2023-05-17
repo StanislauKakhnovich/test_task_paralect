@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/Filters.css';
 
 //  let keyword = 'менеджер';
 //  let payment_from=10000;
@@ -12,11 +13,15 @@ function Filters({getParametryFind, message, getVacancies}) {
     const [catalogues, setCatalogues] = useState('');
 
   return (
-    <div>
-    <input value={catalogues} onChange={e => setCatalogues(e.target.value)}></input>
-    <input value={payment_from} onChange={e => setPayment_from(e.target.value)}></input>
-    <input value={payment_to} onChange={e => setPayment_to(e.target.value)}></input>
-    <button onClick={()=>{getParametryFind(message,payment_from,payment_to,catalogues);}}>Поиск</button>
+    <div className='ContainerForm'>
+      <div className='FlexForm' >Отрасль
+        <input value={catalogues} onChange={e => setCatalogues(e.target.value)}></input>
+      </div>
+      <div className='FlexForm'>Оклад
+        <input value={payment_from} onChange={e => setPayment_from(e.target.value)}></input>
+        <input value={payment_to} onChange={e => setPayment_to(e.target.value)}></input>
+      </div>
+      <button onClick={()=>{getParametryFind(message,payment_from,payment_to,catalogues);}}>Поиск</button>
     </div>
   );
 }
