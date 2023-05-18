@@ -1,4 +1,4 @@
-import {client_secret, proxy_server_url } from './RequestPasswordAuth';
+import {client_secret, proxy_server_url } from './requestPasswordAuth';
 
 // let keyword = 'менеджер';
 // let payment_from=10000;
@@ -6,9 +6,9 @@ import {client_secret, proxy_server_url } from './RequestPasswordAuth';
 // let catalogues=33;
 // keyword, payment_from, payment_to, catalogues
 
-const RequestVacancies = async (parametry) => {
-    let access_token = JSON.parse(localStorage.getItem('dataTokens')).access_token;
-    let token_type = JSON.parse(localStorage.getItem('dataTokens')).token_type;
+const requestVacancies = async (parametry) => {
+    let access_token = JSON.parse(localStorage.getItem('dataToken')).access_token;
+    let token_type = JSON.parse(localStorage.getItem('dataToken')).token_type;
     //const VACANCY_URL = `${proxy_server_url}/catalogues/parent/33`;
     //const VACANCY_URL = `${proxy_server_url}/vacancies`;
     //const VACANCY_URL = `${proxy_server_url}/vacancies/?count=100`;
@@ -43,5 +43,5 @@ const RequestVacancies = async (parametry) => {
     
 }
 
-export default RequestVacancies;
+export default requestVacancies;
 // export default dataVacancies;

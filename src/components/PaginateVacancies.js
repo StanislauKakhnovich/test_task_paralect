@@ -94,7 +94,7 @@ import Star2 from "../images/Star_2.svg";
 
 export function checkSelected (vacancy) {
   let vacancyStorage = localStorage.getItem('vacancy');
-  if (!vacancyStorage) return true;
+  if (!vacancyStorage) return false;
   else {
     let arrVacancy = JSON.parse(vacancyStorage);
     return arrVacancy.find((item)=>vacancy.id===item.id); 
@@ -120,8 +120,8 @@ export function addToSelected (vacancy)  {
 }
 
 export function subtractFromSelected (vacancy) {
-  let vacancyStorage = localStorage.getItem('vacancy');
-  let arrVacancy = JSON.parse(vacancyStorage);
+  let vacancyStorage = JSON.parse(localStorage.getItem('vacancy'));
+  let arrVacancy = vacancyStorage?vacancyStorage:[];
   arrVacancy = arrVacancy.filter((item)=>item.id!==vacancy.id)
   let stringData = JSON.stringify(arrVacancy)
   localStorage.setItem('vacancy', stringData);

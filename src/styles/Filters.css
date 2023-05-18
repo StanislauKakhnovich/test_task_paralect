@@ -1,18 +1,208 @@
-.ContainerForm {
-    border: solid black 2px;
-    height: 200px;
-}
-
-
-.FlexForm {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 5px;
-}
-
-button {
-    width: 120px;
-    margin: 5px;
+.container-form {
     
+    height: 200px;
+    height: 360px;
+    width: 315px;
+    left: 162px;
+    top: 124px;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: linear-gradient(0deg, #EAEBED, #EAEBED),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #EAEBED;
+    
+
+}
+.inner-container-form {
+    height: 320px;
+    width: 275px;
+    left: 20px;
+    top: 20px;
+    border-radius: 0px;
+    
+
+}
+
+.head-form {
+    height: 20px;
+    width: 275px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.filters {
+    height: 20px;
+    width: 93px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    /* styleName: Title S/Bold; */
+    font-family: Title S, Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #232134;
+
+}
+.reset-all {
+    height: 20px;
+    width: 115px;
+    left: 160px;
+    top: 0px;
+    border-radius: 0px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #ACADB9;
+    vertical-align: center;
+    border: none;
+    background-color:  #FFFFFF;
+    margin: 0;
+
+
+}
+
+.board-form {
+    height: 268px;
+    width: 275px;
+    left: 0px;
+    top: 52px;
+    border-radius: 0px;
+
+}
+
+.catalogues-field {
+    height: 69px;
+    width: 275px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    margin-top: 32px;
+}
+.catalogues-head {
+    height: 19px;
+    width: 70px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    /* //styleName: Text base M/Bold; */
+    font-family: 'Text base M', Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 8px;
+}
+.catalogues {
+    height: 42px;
+    width: 275px;
+    left: 0px;
+    top: 27px;
+    border-radius: 8px;
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    background-color: linear-gradient(0deg, #D5D6DC, #D5D6DC),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #D5D6DC;
+    /* //styleName: Subtitle S; */
+    font-family: 'Subtitle S', Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #ACADB9;
+
+
+}
+
+.payment-field {
+    height: 119px;
+    width: 275px;
+    left: 0px;
+    top: 89px;
+    border-radius: 0px;
+    margin-top: 20px;
+
+}
+
+.payment-head {
+    height: 19px;
+    width: 52px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    /* //styleName: Text base M/Bold; */
+    font-family: 'Text base M', Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #232134;
+
+
+
+}
+
+.payment {
+    height: 42px;
+    width: 275px;
+    left: 0px;
+    top: 27px;
+    top: 0px;
+    border-radius: 8px;
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    background-color: linear-gradient(0deg, #D5D6DC, #D5D6DC),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #D5D6DC;
+    /* //styleName: Subtitle S; */
+    font-family: 'Subtitle S', Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #ACADB9;
+
+
+
+
+
+
+
+}
+
+.applay-button {
+    height: 40px;
+    width: 275px;
+    left: 0px;
+    top: 228px;
+    border-radius: 8px;
+    padding: 4px 20px 4px 20px;
+    background-color: #5E96FC;
+    margin-top: 20px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+
 }

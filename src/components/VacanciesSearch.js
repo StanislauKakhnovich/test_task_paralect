@@ -1,23 +1,23 @@
 
 import PaginatedVacancies from './PaginateVacancies';
-import RequestPasswordAuth from './RequestPasswordAuth';
-import RequestUpdateAccessToken from './RequestUpdateAccessToken';
+import requestPasswordAuth from '../function/requestPasswordAuth';
+import requestUpdateAccessToken from '../function/requestUpdateAccessToken';
 import KeyWordArea from './KeyWordArea';
 import Filters from './Filters'; 
 import '../styles/VacanciesSearch.css';
 
-function getInfo () {
+function getTokenStorage () {
   let data = localStorage.getItem('dataTokens');
   console.log(JSON.parse(data));
 }
 
-function VacanciesSearch({dataVacancies,getParametryFind, message, payment_from, payment_to, catalogues, getVacancies }) {
+function VacanciesSearch({dataVacancies,getParametryFind, message, payment_from, payment_to, catalogues }) {
 
   return (
     <>
-    <button onClick={RequestPasswordAuth}>Authorization</button>
-    <button onClick={RequestUpdateAccessToken}>UPDATE_ACCESS_TOKEN</button>
-    <button onClick={getInfo}>LocalStorage</button>
+    {/* <button onClick={requestPasswordAuth}>Authorization</button>
+    <button onClick={requestUpdateAccessToken}>UPDATE_ACCESS_TOKEN</button> */}
+    {/* <button onClick={getTokenStorage}>LocalStorage</button> */}
     <div>{message}</div>
     <div className='Main'>
       <Filters getParametryFind={getParametryFind} message={message}/>

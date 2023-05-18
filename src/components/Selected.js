@@ -6,7 +6,8 @@ import Star2 from "../images/Star_2.svg";
 function Selected () {
     const [starClick, setStarClick] = useState(true);
     let selectedVacancy = JSON.parse(localStorage.getItem('vacancy'));
-    const listSelectedVacancy = selectedVacancy.map((vacancy, index) =>
+    let arrVacancy = selectedVacancy?selectedVacancy:[];
+    const listSelectedVacancy = arrVacancy.map((vacancy, index) =>
 
     <li
       key={vacancy.id}

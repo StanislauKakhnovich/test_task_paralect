@@ -27,17 +27,17 @@ function VacancyCard ({dataVacancies}) {
                     <img key={vacancy.id} src={Star1}  title='star' alt='title' onClick={()=>{addToSelected(vacancy); setStarClick(!starClick)}} ></img>
                     }
 
-                {
-                    vacancy.payment_to
-                    ?
-                    <div>
-                    {vacancy.firm_name} з/п от {vacancy.payment_from} до {vacancy.payment_to} {vacancy.currency}  - {vacancy.type_of_work.title} {vacancy.town.title}
-                    </div>
-                    :
-                    <div>
-                    {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency}   - {vacancy.type_of_work.title} {vacancy.town.title}
-                    </div>
-                }
+                    {
+                        vacancy.payment_to
+                        ?
+                        <div>
+                        {vacancy.firm_name} з/п от {vacancy.payment_from} до {vacancy.payment_to} {vacancy.currency}  - {vacancy.type_of_work.title} {vacancy.town.title}
+                        </div>
+                        :
+                        <div>
+                        {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency}   - {vacancy.type_of_work.title} {vacancy.town.title}
+                        </div>
+                    }
                 
                 <div dangerouslySetInnerHTML={details} />
             </div>
