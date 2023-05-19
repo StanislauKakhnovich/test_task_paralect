@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/App.css';
-import PagesRouters from './PagesRouters';
+import MainPage from './MainPage';
 //const Router = ReactRouterDOM.BrowserRouter;
 
 function App() {
   return (
-
-      <PagesRouters/>
-
+    <div className='main-page'>
+      <MainPage/>
+    </div>
   );
 }
 

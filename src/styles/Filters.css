@@ -7,9 +7,12 @@
     top: 124px;
     border-radius: 12px;
     padding: 20px;
-    background-color: linear-gradient(0deg, #EAEBED, #EAEBED),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background-color:#FFFFFF;  
+    /* linear-gradient(0deg, #EAEBED, #EAEBED),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF); */
     border: 1px solid #EAEBED;
+    margin-right: 28px;
+    /* margin-left: 11.25vw; */
     
 
 }
@@ -42,7 +45,7 @@
     top: 0px;
     border-radius: 0px;
     /* styleName: Title S/Bold; */
-    font-family: Title S, Inter;
+    font-family: 'Title S', Inter;
     font-size: 20px;
     font-weight: 700;
     line-height: 20px;
@@ -179,13 +182,6 @@
     letter-spacing: 0px;
     text-align: left;
     color: #ACADB9;
-
-
-
-
-
-
-
 }
 
 .applay-button {
@@ -204,5 +200,6 @@
     letter-spacing: 0em;
     text-align: center;
     color: #FFFFFF;
+    border:none;
 
 }

@@ -1,29 +1,16 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link,  Outlet } from 'react-router-dom';
+import { React, useState} from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Header from './Header';
 import VacanciesSearch from './VacanciesSearch';
 import VacancyCard from './VacancyCard';
 import Selected from './Selected';
 import requestVacancies from '../function/requestVacancies';
 import { checkToken } from '../function/checkToken';
-import '../styles/PagesRouters.css';
+import '../styles/MainPage.css';
 
 
 
-
-
-function Nav(){
-    return <>
-            <nav>
-            <Link to="/">Поиск вакансий</Link> 
-            <Link to="/selected">Избранное</Link>
-        </nav>
-        <hr />
-        <Outlet />
-        </>;
-}
-
-function PagesRouters () {
+function MainPage () {
 
     const [parametry, setParametry] = useState(['','','','','noClick']);
 
@@ -64,14 +51,12 @@ function PagesRouters () {
     else {
         return (
             <BrowserRouter>
-                <div>
-                  <Nav />
+                  <Header/>
                   <Routes>
                     <Route path="/" element={<VacanciesSearch message={parametry[0]}  payment_from={parametry[1]} payment_to={parametry[2]} catalogues={parametry[3]} dataVacancies={dataVacancies} getParametryFind={getParametryFind} />}></Route>
                     <Route path="/:id" element={<VacancyCard dataVacancies={dataVacancies}/>} />
                     <Route path="/selected" element={<Selected/>}></Route>
                    </Routes>
-                </div>
             </BrowserRouter>
         );
     }
@@ -79,4 +64,4 @@ function PagesRouters () {
 
 }
 
-export default PagesRouters;
+export default MainPage;

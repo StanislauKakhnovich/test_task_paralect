@@ -7,3 +7,72 @@
 .items {
   margin-bottom: 1rem;
 }
+
+.vacancy-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.vacancy-short {
+  height: 137px;
+  width: 53.6vw;
+  left: 0px;
+  top: 64px;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #FFFFFF;
+  margin-top: 16px;
+  border: 1px solid #EAEBED;
+
+}
+
+.upper-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* //styleName: Title S/Semibold; */
+
+
+
+}
+.name-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+  color: #5E96FC;
+}
+.btn-link {
+  height: 24px;
+  width: 24px;
+  background-color: #FFFFFF;
+  border: none;
+  padding: 0px;
+}
+
+.middle-container {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-top: 12.5px;
+
+}
+
+.mnemonic {
+  color: #7B7C88;
+}
+
+.down-container {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 12.5px;
+}

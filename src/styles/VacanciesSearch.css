@@ -1,8 +1,9 @@
 .Main {
     display: flex;
-    margin: 5px;
+    margin-top: 40px;
+    justify-content: center;
 }
 
 .RightSideMain {
-    margin: 5px;
+    width: 53.6vw;
 }

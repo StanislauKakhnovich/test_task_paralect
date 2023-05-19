@@ -36,4 +36,13 @@
     transform: rotate(360deg);
   }
 } */
+.main-page {
+  /* height: 900px;
+  width: 1440px;
+  left: 60px;
+  top: 101px; */
+  border-radius: 12px;
+  background-color: #F7F7F8;
 
+
+}

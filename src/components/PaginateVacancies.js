@@ -133,11 +133,11 @@ function PaginatedVacancies({dataVacancies}) {
   
   const listVacancies = dataVacancies.map((vacancy, index) =>
     
-    <li
+    <li className='vacancy-short'
       key={vacancy.id}
     >
-      <div>
-        <NavLink to={`/${vacancy.id}`}>{vacancy.profession}</NavLink>
+      <div className='upper-container'>
+        <NavLink className='name-link' to={`/${vacancy.id}`}>{vacancy.profession}</NavLink>
         {/* <IconStar          
         name={'document'}
          color={'#5E96FC'}
@@ -146,34 +146,40 @@ function PaginatedVacancies({dataVacancies}) {
          /> */}
          {
           checkSelected(vacancy)?
-          <img key={vacancy.id} src={Star2}  title='star' alt='title' onClick={()=>{subtractFromSelected(vacancy); setStarClick(!starClick)}} ></img>
+          <button className='btn-link' onClick={()=>{subtractFromSelected(vacancy); setStarClick(!starClick)}}>
+          <img className='image-link' key={vacancy.id} src={Star2}  title='star' alt='star'  ></img>
+          </button>
           :
-          <img key={vacancy.id} src={Star1}  title='star' alt='title' onClick={()=>{addToSelected(vacancy); setStarClick(!starClick)}} ></img>
+          <button className='btn-link' onClick={()=>{addToSelected(vacancy); setStarClick(!starClick)}}>
+          <img className='image-link' key={vacancy.id} src={Star1}  title='star' alt='star'  ></img>
+          </button>
          }
-         
-        
       </div>
 
       {
         vacancy.payment_to
         ?
-        <div>
-        {vacancy.firm_name} з/п от {vacancy.payment_from} до {vacancy.payment_to} {vacancy.currency}  - {vacancy.type_of_work.title} {vacancy.town.title}
+        <div className='middle-container'>
+          <b>з/п от {vacancy.payment_from} до {vacancy.payment_to} {vacancy.currency}</b> <span className='mnemonic'>&bull;</span>   {vacancy.type_of_work.title}
         </div>
         :
-        <div>
-        {vacancy.firm_name} з/п от {vacancy.payment_from} {vacancy.currency}   - {vacancy.type_of_work.title} {vacancy.town.title}
+        <div className='middle-container'>
+          <b>з/п от {vacancy.payment_from} {vacancy.currency}</b> <span className='mnemonic'>&bull;</span>  {vacancy.type_of_work.title} 
         </div>
       }
+
+      <div className='down-container'>
+      {vacancy.town.title}
+      </div>
      
     </li>
   );
 
   return (
-    <ul>{listVacancies}</ul>
+    <ul className='vacancy-list'>{listVacancies}</ul>
   );
 }
-
+ 
 
 export default PaginatedVacancies;
 
