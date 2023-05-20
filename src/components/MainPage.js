@@ -10,15 +10,12 @@ import { checkToken } from '../function/checkToken';
 import '../styles/MainPage.css';
 
 
-
 function MainPage () {
 
     const [parametry, setParametry] = useState(['','','','','noClick']);
 
     const getParametryFind = (message, payment_from,payment_to,catalogues) => {
         let arrParametry = [message,payment_from,payment_to,catalogues,'onClick'];
-        console.log(arrParametry);
-        console.log (dataVacancies);
         return setParametry(arrParametry);
     } 
     const [dataVacancies, setDataVacancies] = useState([]);
@@ -33,8 +30,6 @@ function MainPage () {
             setStartPreloader(false);
             let newVacancies = dataRespond.objects;
             setDataVacancies(newVacancies);
-            console.log(parametry);
-            console.log(newVacancies.length);
             if (newVacancies.length===0) setIsNothing(true);
       }
 
@@ -65,7 +60,6 @@ function MainPage () {
             </BrowserRouter>
         );
     }
-
 
 }
 

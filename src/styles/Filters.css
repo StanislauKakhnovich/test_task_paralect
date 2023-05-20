@@ -59,8 +59,6 @@
     border: none;
     background-color:  #FFFFFF;
     margin: 0;
-
-
 }
 
 .board-form {
@@ -69,7 +67,6 @@
     left: 0px;
     top: 52px;
     border-radius: 0px;
-
 }
 
 .catalogues-field {
@@ -80,6 +77,7 @@
     border-radius: 0px;
     margin-top: 32px;
 }
+
 .catalogues-head {
     height: 19px;
     width: 70px;
@@ -94,6 +92,7 @@
     text-align: left;
     margin-bottom: 8px;
 }
+
 .industry-select {
     height: 42px;
     width: 275px;
@@ -122,7 +121,6 @@
     top: 89px;
     border-radius: 0px;
     margin-top: 20px;
-
 }
 
 .payment-head {
@@ -138,9 +136,6 @@
     letter-spacing: 0em;
     text-align: left;
     color: #232134;
-
-
-
 }
 
 .salary-from-input,

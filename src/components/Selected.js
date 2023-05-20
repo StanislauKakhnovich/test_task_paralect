@@ -1,21 +1,21 @@
 import { NavLink } from 'react-router-dom';
 import { useState, React } from 'react';
-import { subtractFromSelected } from './PaginateVacancies';
+import   { subtractFromSelected } from './PaginatedItems';
 import EmptyState from './EmptyState';
 import Star2 from "../images/Star_2.svg";
 import Icon from "../images/Icon.svg";
 import '../styles/Selected.css';
 
 function Selected ({getParametryFind}) {
-    const [starClick, setStarClick] = useState(true);
     let selectedVacancy = JSON.parse(localStorage.getItem('vacancy'));
     let arrVacancy = selectedVacancy?selectedVacancy:[];
-
+    const [starClick, setStarClick] = useState(true);
     if (selectedVacancy.length ===0){
       return <EmptyState getParametryFind={getParametryFind} />
     }
 
     else {
+
         const listSelectedVacancy = arrVacancy.map((vacancy, index) =>
 
         <li className='vacancy-short'key={vacancy.id}>
@@ -53,8 +53,7 @@ function Selected ({getParametryFind}) {
         </div>
       );
     }
-
+  }
   
-}
 
 export default Selected;
