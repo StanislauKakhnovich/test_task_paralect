@@ -1,8 +1,4 @@
 
-
-
-
-
 #preloader {
     height: 60px;
     width: 60px;
@@ -52,9 +48,3 @@
       opacity: 1;
     }
   }
-
-  /* .LaptopPreloader {
-    position: fixed;
-    top: calc(50vh - 200px);
-    left: calc(50% - 85px);
-  } */

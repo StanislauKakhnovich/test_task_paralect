@@ -4,13 +4,10 @@
     background-color: #FFFFFF;
     height: 48px;
     width: 53.6vw;
-    /* width: 773px; */
     border-radius: 8px;
     padding: 0px 12px 0px 12px;
     justify-content: space-between;
     border: 1px solid #EAEBED;
-
-
 }
 
 .search-glass {
@@ -21,7 +18,7 @@
 
 .search-text {
     height: 21px;
-    width: 192px;
+    width: 200px;
     left: 24px;
     top: 0px;
     border-radius: 0px;
@@ -34,9 +31,6 @@
     color: #ACADB9;
     border: none;
     outline: none;
-    /* margin-right: 31.25vw; */
-    /* margin-right: 450px; */
-
 }
 
 .search-btn {
@@ -54,7 +48,17 @@
     text-align: center;
     color: #FFFFFF;
     border: none;
+}
 
-
-
+@media only screen and (max-width: 810px) {
+    .container-search {
+        width: 90vw;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-top: 40px;
+    }
+    .search-text {
+        width: auto;
+        font-size: 10px;
+    }
 }

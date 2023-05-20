@@ -12,8 +12,8 @@ function Header(){
                     <div className='name-logo' >Jobored</div>
                 </div>
                 <div className='header-links'>
-                    <NavLink to="/" className={obj => ("PageLink"+(obj.isActive?" ActivePageLink":""))}>Поиск Вакансий</NavLink>
-                    <NavLink to="selected" className={obj => ("PageLink"+(obj.isActive?" ActivePageLink":""))}>Избранное</NavLink>
+                    <NavLink to="/" className={obj => ("PageLink"+(obj.isActive?" ActivePageLink":""))} title='Поиск Вакансий'>Поиск Вакансий</NavLink>
+                    <NavLink to="selected" className={obj => ("PageLink"+(obj.isActive?" ActivePageLink":""))} title='Избранное'>Избранное</NavLink>
                 </div>
             </div>
             <Outlet />

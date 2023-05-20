@@ -9,9 +9,9 @@ function KeyWordArea({getParametryFind, payment_from, payment_to, catalogues, ge
     <div className='container-search'>
       <div>
       <img className='search-glass' src={Search}  title='star' alt='title' ></img>
-      <input className='search-text' placeholder='Введите название вакансии' value={message} onChange={e => setMessage(e.target.value)}></input>
+      <input data-elem="search-input" className='search-text' placeholder='Введите название вакансии' value={message} onChange={e => setMessage(e.target.value)}></input>
       </div>
-      <button className='search-btn' onClick={()=>{getParametryFind(message,payment_from,payment_to,catalogues);}}>Поиск</button>
+      <button data-elem="search-button" className='search-btn' onClick={()=>{getParametryFind(message,payment_from,payment_to,catalogues);}}>Поиск</button>
     </div>
   );
 }

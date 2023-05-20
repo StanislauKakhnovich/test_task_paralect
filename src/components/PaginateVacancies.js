@@ -7,6 +7,7 @@ import '../styles/PaginateVacancies.css';
 // import IconStar from './IconStar';
 import Star1 from "../images/Star_1.svg";
 import Star2 from "../images/Star_2.svg";
+import Icon from "../images/Icon.svg";
 
 //const vacancys = [...Array(33).keys()];
 //var vacancys = {vacancys};
@@ -133,25 +134,17 @@ function PaginatedVacancies({dataVacancies}) {
   
   const listVacancies = dataVacancies.map((vacancy, index) =>
     
-    <li className='vacancy-short'
-      key={vacancy.id}
-    >
+    <li data-elem={`vacancy-${vacancy.id}`} className='vacancy-short' key={vacancy.id}>
       <div className='upper-container'>
-        <NavLink className='name-link' to={`/${vacancy.id}`}>{vacancy.profession}</NavLink>
-        {/* <IconStar          
-        name={'document'}
-         color={'#5E96FC'}
-         size={'32'}
-         className={'button-left-panel'}
-         /> */}
+        <NavLink className='name-link' to={`/${vacancy.id}`} title={vacancy.profession}>{vacancy.profession}</NavLink>
          {
           checkSelected(vacancy)?
-          <button className='btn-link' onClick={()=>{subtractFromSelected(vacancy); setStarClick(!starClick)}}>
-          <img className='image-link' key={vacancy.id} src={Star2}  title='star' alt='star'  ></img>
+          <button data-elem={`vacancy-${vacancy.id}-shortlist-button`} className='btn-link' onClick={()=>{subtractFromSelected(vacancy); setStarClick(!starClick)}}>
+          <img className='image-link' key={vacancy.id} src={Star2}  title='star' alt='star'></img>
           </button>
           :
-          <button className='btn-link' onClick={()=>{addToSelected(vacancy); setStarClick(!starClick)}}>
-          <img className='image-link' key={vacancy.id} src={Star1}  title='star' alt='star'  ></img>
+          <button data-elem={`vacancy-${vacancy.id}-shortlist-button`} className='btn-link' onClick={()=>{addToSelected(vacancy); setStarClick(!starClick)}}>
+          <img className='image-link' key={vacancy.id} src={Star1}  title='star' alt='star'></img>
           </button>
          }
       </div>
@@ -169,7 +162,8 @@ function PaginatedVacancies({dataVacancies}) {
       }
 
       <div className='down-container'>
-      {vacancy.town.title}
+        <img className='image-icon' src={Icon}  title='star' alt='star'></img>
+        <span>{vacancy.town.title}</span>
       </div>
      
     </li>

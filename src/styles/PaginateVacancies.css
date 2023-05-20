@@ -11,6 +11,7 @@
 .vacancy-list {
   list-style-type: none;
   padding: 0px;
+  
 }
 
 .vacancy-short {
@@ -23,17 +24,12 @@
   background-color: #FFFFFF;
   margin-top: 16px;
   border: 1px solid #EAEBED;
-
 }
 
 .upper-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* //styleName: Title S/Semibold; */
-
-
-
 }
 .name-link {
   font-family: 'Inter', sans-serif;
@@ -44,6 +40,9 @@
   text-align: left;
   text-decoration: none;
   color: #5E96FC;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn-link {
   height: 24px;
@@ -60,7 +59,6 @@
   letter-spacing: 0px;
   text-align: left;
   margin-top: 12.5px;
-
 }
 
 .mnemonic {
@@ -75,4 +73,30 @@
   letter-spacing: 0em;
   text-align: left;
   margin-top: 12.5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+} 
+
+.image-icon {
+  margin-right: 11.33px;
+}
+
+@media only screen and (max-width: 810px) {
+  .vacancy-short {
+    width: 90vw;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .name-link {
+    font-size: 16px;
+  }
+  .middle-container {
+    font-size: 12px;
+    margin-top: 7px;
+  }
+  .down-container {
+    font-size: 12px;
+    margin-top: 7px;
+  } 
 }

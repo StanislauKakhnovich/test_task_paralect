@@ -6,4 +6,16 @@
 
 .RightSideMain {
     width: 53.6vw;
+    margin-bottom: 180px;
+}
+
+@media only screen and (max-width: 810px) {
+    .Main {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .RightSideMain {
+        width: 90vw;
+    }
 }

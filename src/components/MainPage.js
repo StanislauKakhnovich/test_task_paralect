@@ -4,6 +4,7 @@ import Header from './Header';
 import VacanciesSearch from './VacanciesSearch';
 import VacancyCard from './VacancyCard';
 import Selected from './Selected';
+import EmptyState from './EmptyState';
 import requestVacancies from '../function/requestVacancies';
 import { checkToken } from '../function/checkToken';
 import '../styles/MainPage.css';
@@ -36,7 +37,12 @@ function MainPage () {
       }
 
     if (isNothing) {
-        return <div>По вашему запросу ничего не обнаружено</div>
+        return (
+            <BrowserRouter>
+                <Header/>
+                <EmptyState isNothing={isNothing}/>
+            </BrowserRouter>
+        ) 
     }
     if(dataVacancies.length===0 || parametry[4]==='onClick') {    
 
@@ -55,7 +61,8 @@ function MainPage () {
                   <Routes>
                     <Route path="/" element={<VacanciesSearch message={parametry[0]}  payment_from={parametry[1]} payment_to={parametry[2]} catalogues={parametry[3]} dataVacancies={dataVacancies} getParametryFind={getParametryFind} />}></Route>
                     <Route path="/:id" element={<VacancyCard dataVacancies={dataVacancies}/>} />
-                    <Route path="/selected" element={<Selected/>}></Route>
+                    <Route path="/selected" element={<Selected isNothing={isNothing}/>}></Route>
+                    
                    </Routes>
             </BrowserRouter>
         );

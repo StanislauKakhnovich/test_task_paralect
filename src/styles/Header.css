@@ -8,8 +8,6 @@
     text-align: left;
     color: #5E96FC;
     text-decoration: none;
-
-
 }
 
 .ActivePageLink {
@@ -20,17 +18,13 @@
     letter-spacing: 0px;
     text-align: left;
     color: #232134;
-
-
 }
 
 .header {
     height: 84px;
-    /* width: 1440px; */
     left: 0px;
     top: 0px;
     border-radius: 0px;
-    /* padding: 10px 11.25vw 10px 11.25vw; */
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #FFFFFF;
@@ -44,7 +38,6 @@
     border-radius: 0px;
     display: flex;
     margin-right: 28px;
-
 }
 .image-logo {
     height: 30px;
@@ -63,21 +56,32 @@
     line-height: 36px;
     letter-spacing: -0.02em;
     text-align: left;
-
-
 }
 
 .header-links {
     height: 20px;
-    /* width: 275px; */
     width: 53.6vw;
-    /* margin-left: 583px; */
     top: 32px;
     border-radius: 0px;
     display: flex;
     justify-content: flex-start;
     margin-left: 0px;
     padding-left: 78px;
-   
+}
 
+@media only screen and (max-width: 810px) {
+    .header {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .header-logo {
+        width: auto;
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    .header-links {
+        padding-left: 0px;
+        width: auto;
+        margin-top: 5px;
+    }
 }
