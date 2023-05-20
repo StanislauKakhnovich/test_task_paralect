@@ -5,7 +5,7 @@ import Filters from './Filters';
 import '../styles/VacanciesSearch.css';
 
 
-function VacanciesSearch({dataVacancies,getParametryFind, message, payment_from, payment_to, catalogues }) {
+function VacanciesSearch({dataVacancies,getParametryFind, message, payment_from, payment_to, catalogues, startPreloader }) {
 
   return (
     <>
@@ -15,6 +15,7 @@ function VacanciesSearch({dataVacancies,getParametryFind, message, payment_from,
         <KeyWordArea getParametryFind={getParametryFind} payment_from={payment_from} payment_to={payment_to} catalogues={catalogues}/>
         <PaginatedVacancies dataVacancies={dataVacancies}  itemsPerPage={10}/>
       </div>
+      {startPreloader&&<div id="preloader" className="hidden" aria-busy='true'  role={'progressbar'}></div>}
     </div>
     </>
   );
