@@ -15,7 +15,6 @@
   border: 1px solid #D5D6DC;
   text-align: center;
   background-color:  #FFFFFF;
-
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -65,11 +64,11 @@
   text-overflow: ellipsis;
 }
 .btn-link {
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
   background-color: #FFFFFF;
   border: none;
-  padding: 0px;
+  padding-bottom: 8px;
 }
 
 .middle-container {
@@ -119,4 +118,24 @@
     font-size: 12px;
     margin-top: 7px;
   } 
+  .PaginationFooter {
+    width: 90vw;
+  }
+  .PaginationFooter li {
+    height: 26px;
+    width: 26px;
+    border-radius: 3px;
+    font-size: 12px;
+    padding-top: 3px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .PaginationFooter li {
+    height: 18px;
+    width: 18px;
+    border-radius: 2px;
+    font-size: 10px;
+    padding-top: 2px;
+  }
 }

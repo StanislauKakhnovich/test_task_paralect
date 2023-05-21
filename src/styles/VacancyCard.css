@@ -6,7 +6,7 @@
 }
 
 .short-card {
-    height: 157px;
+    height: auto;
 }
 
 .name-vacancy {
@@ -16,7 +16,6 @@
     line-height: 34px;
     letter-spacing: 0em;
     text-align: left;
-    
 }
 .middle-card {
     font-family: 'Inter', sans-serif;
@@ -40,6 +39,19 @@
     }
     .middle-card {
         font-size: 14px;
+    }
+    
+    .vacancy-describe {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .name-vacancy {
+        font-size: 18px;
+    }
+    .middle-card {
+        font-size: 10px;
     }
     
     .vacancy-describe {
