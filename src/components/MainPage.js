@@ -45,12 +45,13 @@ function MainPage () {
         ) 
     }
     if((dataVacancies.length===0&&isCheck) || parametry[4]==='onClick') {   
+     
             getVacancies();
             parametry[4]='noClick';
             return <div id="preloader" className="hidden" aria-busy='true'  role={'progressbar'}></div>
     }
    
-    else {
+    else if (parametry[4]==='noClick')  {
         return (
             <BrowserRouter>
                   <Header/>

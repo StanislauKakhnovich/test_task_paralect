@@ -36,7 +36,7 @@ function Filters({getParametryFind, message}) {
             <input data-elem="salary-from-input" className="salary-from-input" type="number"  step="10000" placeholder='От'min="0"value={payment_from} onChange={e => setPayment_from(e.target.value)}></input>
             <input data-elem="salary-to-input" className="salary-to-input" type="number"  step="10000" placeholder='До'min="0" value={payment_to} onChange={e => setPayment_to(e.target.value)}></input>
           </div>
-          <button data-elem="search-button" className='applay-button' onClick={(e)=>{e.stopPropagation();getParametryFind(message,payment_from,payment_to,catalogues);}}>Применить</button>
+          <button data-elem="search-button" className='applay-button' onClick={()=>{getParametryFind(message,payment_from,payment_to,catalogues);}}>Применить</button>
         </div>
       </div>
     </div>

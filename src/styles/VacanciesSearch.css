@@ -6,7 +6,7 @@
 
 .RightSideMain {
     width: 53.6vw;
-    margin-bottom: 180px;
+    height: 900px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -17,5 +17,6 @@
     }
     .RightSideMain {
         width: 90vw;
+        
     }
 }

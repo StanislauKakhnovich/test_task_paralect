@@ -10,13 +10,14 @@ function Selected ({getParametryFind}) {
     let selectedVacancy = JSON.parse(localStorage.getItem('vacancy'));
     let arrVacancy = selectedVacancy?selectedVacancy:[];
     const [starClick, setStarClick] = useState(true);
-    if (!selectedVacancy){
+
+    if (!selectedVacancy || arrVacancy.length===0){
       return <EmptyState getParametryFind={getParametryFind} />
     }
 
     else {
 
-        const listSelectedVacancy = arrVacancy.map((vacancy, index) =>
+        const listSelectedVacancy = arrVacancy.map((vacancy) =>
 
         <li className='vacancy-short'key={vacancy.id}>
           <div className='upper-container'>
