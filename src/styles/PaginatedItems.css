@@ -2,9 +2,8 @@
 
 .PaginationFooter {
   list-style-type: none;
-  width: 53.6vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-left: 0px;
   margin-top: 40px;
 }
@@ -20,6 +19,7 @@
   font-weight: 400;
   letter-spacing: 0em;
   padding-top: 3px;
+  margin: 8px;
 }
 .PaginationFooter li.selected {
   background: #5E96FC;
@@ -101,7 +101,7 @@
   margin-right: 11.33px;
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 850px) {
   .vacancy-short {
     width: 90vw;
     margin-left: 3px;
@@ -118,15 +118,13 @@
     font-size: 12px;
     margin-top: 7px;
   } 
-  .PaginationFooter {
-    width: 90vw;
-  }
   .PaginationFooter li {
     height: 26px;
     width: 26px;
     border-radius: 3px;
     font-size: 12px;
     padding-top: 3px;
+    margin: 6px;
   }
 }
 
@@ -137,5 +135,6 @@
     border-radius: 2px;
     font-size: 10px;
     padding-top: 2px;
+    margin: 4px;
   }
 }

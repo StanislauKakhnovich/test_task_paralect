@@ -10,6 +10,8 @@ import { checkToken } from '../function/checkToken';
 import '../styles/MainPage.css';
 
 
+
+
 function MainPage () {
 
     const [parametry, setParametry] = useState(['','','','','noClick']);
@@ -21,9 +23,10 @@ function MainPage () {
     const [dataVacancies, setDataVacancies] = useState([]);
     const [isNothing, setIsNothing] = useState(false); 
     const [startPreloader, setStartPreloader] = useState(false);
+    const [isCheck, setIsCheck] = useState(true); 
     
     const getVacancies = async () => {
-            
+            setIsCheck(!isCheck);
             await checkToken();
             setStartPreloader(true);
             let dataRespond = await requestVacancies(parametry);
@@ -41,7 +44,7 @@ function MainPage () {
             </BrowserRouter>
         ) 
     }
-    if(dataVacancies.length===0 || parametry[4]==='onClick') {    
+    if((dataVacancies.length===0&&isCheck) || parametry[4]==='onClick') {   
             getVacancies();
             parametry[4]='noClick';
             return <div id="preloader" className="hidden" aria-busy='true'  role={'progressbar'}></div>
@@ -54,8 +57,7 @@ function MainPage () {
                   <Routes>
                     <Route path="/" element={<VacanciesSearch message={parametry[0]}  payment_from={parametry[1]} payment_to={parametry[2]} catalogues={parametry[3]} dataVacancies={dataVacancies} getParametryFind={getParametryFind} startPreloader={startPreloader} />}></Route>
                     <Route path="/:id" element={<VacancyCard dataVacancies={dataVacancies}/>} />
-                    <Route path="/selected" element={<Selected isNothing={isNothing}/>}></Route>
-                    
+                    <Route path="/selected" element={<Selected isNothing={isNothing}/>}></Route>   
                    </Routes>
             </BrowserRouter>
         );

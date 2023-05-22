@@ -33,7 +33,7 @@
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 850px) {
     .name-vacancy {
         font-size: 22px;
     }
