@@ -38,10 +38,11 @@ function MainPage () {
 
     if (isNothing) {
         return (
-            <BrowserRouter>
-                <Header/>
-                <EmptyState isNothing={isNothing}/>
-            </BrowserRouter>
+
+                <BrowserRouter>
+                    <Header/>
+                    <EmptyState isNothing={isNothing}/>
+                </BrowserRouter>
         ) 
     }
     if((dataVacancies.length===0&&isCheck) || parametry[4]==='onClick') {   
@@ -53,14 +54,15 @@ function MainPage () {
    
     else if (parametry[4]==='noClick')  {
         return (
-            <BrowserRouter>
-                  <Header/>
-                  <Routes>
-                    <Route path="/" element={<VacanciesSearch message={parametry[0]}  payment_from={parametry[1]} payment_to={parametry[2]} catalogues={parametry[3]} dataVacancies={dataVacancies} getParametryFind={getParametryFind} startPreloader={startPreloader} />}></Route>
-                    <Route path="/:id" element={<VacancyCard dataVacancies={dataVacancies}/>} />
-                    <Route path="/selected" element={<Selected isNothing={isNothing}/>}></Route>   
-                   </Routes>
-            </BrowserRouter>
+                <BrowserRouter>
+                    <Header/>
+                    <Routes>
+                        <Route path="/" element={<VacanciesSearch message={parametry[0]}  payment_from={parametry[1]} payment_to={parametry[2]} catalogues={parametry[3]} dataVacancies={dataVacancies} getParametryFind={getParametryFind} startPreloader={startPreloader} />}></Route>
+                        <Route path="/:id" element={<VacancyCard dataVacancies={dataVacancies}/>} />
+                        <Route path="/selected" element={<Selected isNothing={isNothing}/>}></Route>   
+                    </Routes>
+                </BrowserRouter>
+
         );
     }
 

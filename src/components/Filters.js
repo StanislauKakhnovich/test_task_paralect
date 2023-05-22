@@ -17,12 +17,10 @@ function Filters({getParametryFind, message}) {
   return (
     <div className='container-form'>
       <div className='inner-container-form'>
-        
           <div className='head-form'>
             <span className='filters'>Фильтры</span>
             <button className='reset-all' onClick={()=>resetAll()}>Сбросить все <img src={cross}  title='cross' alt='title'></img> </button>
           </div>
-          
         <div className='board-form'>
           <div className='catalogues-field'>
             <div className='catalogues-head'>Отрасль</div>
