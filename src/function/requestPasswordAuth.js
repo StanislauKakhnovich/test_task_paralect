@@ -5,7 +5,7 @@ export const client_secret = 'v3.r.137440105.ffdbab114f92b821eac4e21f485343924a7
 // export const proxy_server_url = 'https://startup-summer-2023-proxy.onrender.com/2.0';
 
 export const proxy_server_url = 'https://startup-summer-proxy-production.up.railway.app/2.0';
- 
+
 const PASSWORD_AUTH_URL = `${proxy_server_url}/oauth2/password/?login=${login}&password=${password}&client_id=${client_id}&client_secret=${client_secret}`;
 
 const requestPasswordAuth = async () => {
@@ -16,11 +16,11 @@ const requestPasswordAuth = async () => {
             'x-secret-key': 'GEU4nvd3rej*jeh.eqp'
         },
     }
-    try{
-        const response = await fetch (PASSWORD_AUTH_URL, settings);
+    try {
+        const response = await fetch(PASSWORD_AUTH_URL, settings);
         const data = await response.json();
         let stringData = JSON.stringify(data);
-        localStorage.setItem('dataToken', stringData); 
+        localStorage.setItem('dataToken', stringData);
     } catch (e) {
         console.log(e);
     }

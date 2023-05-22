@@ -1,4 +1,4 @@
-import {client_id, client_secret, proxy_server_url } from './requestPasswordAuth';
+import { client_id, client_secret, proxy_server_url } from './requestPasswordAuth';
 
 const requestUpdateAccessToken = async (refresh_token) => {
 
@@ -10,8 +10,8 @@ const requestUpdateAccessToken = async (refresh_token) => {
             'x-secret-key': 'GEU4nvd3rej*jeh.eqp'
         },
     }
-    try{
-        const response = await fetch (UPDATE_ACCESS_TOKEN_URL, settings);
+    try {
+        const response = await fetch(UPDATE_ACCESS_TOKEN_URL, settings);
         const data = await response.json();
         let stringData = JSON.stringify(data);
         localStorage.setItem('dataToken', stringData);

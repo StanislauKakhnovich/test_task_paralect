@@ -17,6 +17,7 @@
     letter-spacing: 0em;
     text-align: left;
 }
+
 .middle-card {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -37,10 +38,11 @@
     .name-vacancy {
         font-size: 22px;
     }
+
     .middle-card {
         font-size: 14px;
     }
-    
+
     .vacancy-describe {
         width: 90vw;
     }
@@ -50,10 +52,11 @@
     .name-vacancy {
         font-size: 18px;
     }
+
     .middle-card {
         font-size: 10px;
     }
-    
+
     .vacancy-describe {
         width: 90vw;
     }

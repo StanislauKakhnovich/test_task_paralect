@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .header-logo {
     height: 36px;
     width: 315px;
@@ -39,11 +40,13 @@
     display: flex;
     margin-right: 28px;
 }
+
 .image-logo {
     height: 30px;
     width: 30px;
     margin-right: 7.58px;
 }
+
 .name-logo {
     height: 36px;
     width: 99px;
@@ -74,11 +77,13 @@
         flex-direction: column;
         justify-content: flex-start;
     }
+
     .header-logo {
         width: auto;
         margin-right: 0px;
         margin-top: 5px;
     }
+
     .header-links {
         padding-left: 0px;
         width: auto;

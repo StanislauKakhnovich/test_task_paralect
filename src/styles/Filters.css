@@ -5,10 +5,11 @@
     top: 124px;
     border-radius: 12px;
     padding: 20px;
-    background-color:#FFFFFF;  
+    background-color: #FFFFFF;
     border: 1px solid #EAEBED;
     margin-right: 28px;
 }
+
 .inner-container-form {
     height: 320px;
     width: 275px;
@@ -42,6 +43,7 @@
     color: #232134;
 
 }
+
 .reset-all {
     height: 20px;
     width: 130px;
@@ -57,7 +59,7 @@
     color: #ACADB9;
     vertical-align: center;
     border: none;
-    background-color:  #FFFFFF;
+    background-color: #FFFFFF;
     margin: 0;
 }
 
@@ -102,7 +104,7 @@
     padding: 8px 12px 8px 12px;
     display: flex;
     justify-content: space-between;
-    background-color:  #FFFFFF;
+    background-color: #FFFFFF;
     border: 1px solid #D5D6DC;
     font-family: 'Inter,' sans-serif;
     font-size: 14px;
@@ -139,8 +141,7 @@
 }
 
 .salary-from-input,
-.salary-to-input
- {
+.salary-to-input {
     height: 42px;
     width: 275px;
     left: 0px;
@@ -179,7 +180,7 @@
     letter-spacing: 0em;
     text-align: center;
     color: #FFFFFF;
-    border:none;
+    border: none;
 }
 
 @media only screen and (max-width: 850px) {
@@ -192,30 +193,32 @@
     .inner-container-form {
         width: 250px;
     }
-    
+
     .head-form {
         width: 250px;
     }
+
     .board-form {
         width: 250px;
     }
-    
+
     .catalogues-field {
         width: 250px;
     }
+
     .industry-select {
         width: 250px;
     }
-    
+
     .payment-field {
         width: 250px;
     }
-    
+
     .salary-from-input,
-    .salary-to-input{
+    .salary-to-input {
         width: 250px;
     }
-    
+
     .applay-button {
         width: 250px;
     }
