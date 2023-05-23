@@ -46,10 +46,19 @@
 
 .reset-all {
     height: 20px;
-    width: 120px;
+    width: 115px;
     left: 160px;
     top: 0px;
     border-radius: 0px;
+    border: none;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0 0 0 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reset-all span {
     font-family: 'Inter,' sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -57,11 +66,9 @@
     letter-spacing: 0px;
     text-align: left;
     color: #ACADB9;
-    vertical-align: center;
-    border: none;
-    background-color: #FFFFFF;
-    margin: 0;
-    padding: 0 0 0 10px;
+}
+.reset-all img {
+    padding-top: 4px;
 }
 
 .board-form {

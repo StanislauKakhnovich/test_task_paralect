@@ -19,7 +19,10 @@ function Filters({ getParametryFind, message }) {
       <div className='inner-container-form'>
         <div className='head-form'>
           <span className='filters'>Фильтры</span>
-          <button className='reset-all' onClick={() => resetAll()}>Сбросить все <img src={cross} title='cross' alt='title'></img> </button>
+          <button className='reset-all' onClick={() => resetAll()}>
+            <span>Сбросить все </span>
+            <img src={cross} title='cross' alt='title'></img>
+            </button>
         </div>
         <div className='board-form'>
           <div className='catalogues-field'>
