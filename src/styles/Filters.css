@@ -46,7 +46,7 @@
 
 .reset-all {
     height: 20px;
-    width: 130px;
+    width: 120px;
     left: 160px;
     top: 0px;
     border-radius: 0px;
@@ -61,6 +61,7 @@
     border: none;
     background-color: #FFFFFF;
     margin: 0;
+    padding: 0 0 0 10px;
 }
 
 .board-form {
