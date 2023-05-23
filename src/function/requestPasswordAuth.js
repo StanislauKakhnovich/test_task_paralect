@@ -10,20 +10,20 @@ const PASSWORD_AUTH_URL = `${proxy_server_url}/oauth2/password/?login=${login}&p
 
 const requestPasswordAuth = async () => {
 
-    const settings = {
-        method: 'GET',
-        headers: {
-            'x-secret-key': 'GEU4nvd3rej*jeh.eqp'
-        },
-    }
-    try {
-        const response = await fetch(PASSWORD_AUTH_URL, settings);
-        const data = await response.json();
-        let stringData = JSON.stringify(data);
-        localStorage.setItem('dataToken', stringData);
-    } catch (e) {
-        console.log(e);
-    }
+  const settings = {
+    method: 'GET',
+    headers: {
+      'x-secret-key': 'GEU4nvd3rej*jeh.eqp'
+    },
+  }
+  try {
+    const response = await fetch(PASSWORD_AUTH_URL, settings);
+    const data = await response.json();
+    let stringData = JSON.stringify(data);
+    localStorage.setItem('dataToken', stringData);
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 export default requestPasswordAuth;

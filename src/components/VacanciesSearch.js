@@ -1,4 +1,3 @@
-
 import PaginatedItems from './PaginatedItems';
 import KeyWordArea from './KeyWordArea';
 import Filters from './Filters';

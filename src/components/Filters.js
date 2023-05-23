@@ -22,7 +22,7 @@ function Filters({ getParametryFind, message }) {
           <button className='reset-all' onClick={() => resetAll()}>
             <span>Сбросить все </span>
             <img src={cross} title='cross' alt='title'></img>
-            </button>
+          </button>
         </div>
         <div className='board-form'>
           <div className='catalogues-field'>

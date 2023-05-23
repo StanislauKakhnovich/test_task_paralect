@@ -1,22 +1,22 @@
 .Main {
-    display: flex;
-    margin-top: 40px;
-    justify-content: center;
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
 }
 
 .RightSideMain {
-    width: 53.6vw;
-    height: 900px;
+  width: 53.6vw;
+  height: 900px;
 }
 
 @media only screen and (max-width: 850px) {
-    .Main {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
+  .Main {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-    .RightSideMain {
-        width: 90vw;
-    }
+  .RightSideMain {
+    width: 90vw;
+  }
 }

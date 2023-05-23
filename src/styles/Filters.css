@@ -1,233 +1,235 @@
 .container-form {
-    height: 360px;
-    width: 315px;
-    left: 162px;
-    top: 124px;
-    border-radius: 12px;
-    padding: 20px;
-    background-color: #FFFFFF;
-    border: 1px solid #EAEBED;
-    margin-right: 28px;
+  height: 360px;
+  width: 315px;
+  left: 162px;
+  top: 124px;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEBED;
+  margin-right: 28px;
 }
 
 .inner-container-form {
-    height: 320px;
-    width: 275px;
-    left: 20px;
-    top: 20px;
-    border-radius: 0px;
+  height: 320px;
+  width: 275px;
+  left: 20px;
+  top: 20px;
+  border-radius: 0px;
 }
 
 .head-form {
-    height: 20px;
-    width: 275px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    display: flex;
-    justify-content: space-between;
+  height: 20px;
+  width: 275px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .filters {
-    height: 20px;
-    width: 93px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    font-family: 'Inter,' sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #232134;
+  height: 20px;
+  width: 93px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  font-family: 'Inter,' sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #232134;
 
 }
 
 .reset-all {
-    height: 20px;
-    width: 115px;
-    left: 160px;
-    top: 0px;
-    border-radius: 0px;
-    border: none;
-    background-color: #FFFFFF;
-    margin: 0;
-    padding: 0 0 0 7px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 20px;
+  width: 115px;
+  left: 160px;
+  top: 0px;
+  border-radius: 0px;
+  border: none;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0 0 0 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .reset-all span {
-    font-family: 'Inter,' sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #ACADB9;
+  font-family: 'Inter,' sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ACADB9;
 }
+
 .reset-all img {
-    padding-top: 4px;
+  padding-top: 4px;
 }
 
 .board-form {
-    height: 268px;
-    width: 275px;
-    left: 0px;
-    top: 52px;
-    border-radius: 0px;
+  height: 268px;
+  width: 275px;
+  left: 0px;
+  top: 52px;
+  border-radius: 0px;
 }
 
 .catalogues-field {
-    height: 69px;
-    width: 275px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    margin-top: 32px;
+  height: 69px;
+  width: 275px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  margin-top: 32px;
 }
 
 .catalogues-head {
-    height: 19px;
-    width: 70px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    font-family: 'Inter,' sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-bottom: 8px;
+  height: 19px;
+  width: 70px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  font-family: 'Inter,' sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 .industry-select {
-    height: 42px;
-    width: 275px;
-    left: 0px;
-    top: 27px;
-    border-radius: 8px;
-    padding: 8px 12px 8px 12px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    border: 1px solid #D5D6DC;
-    font-family: 'Inter,' sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #ACADB9;
-    outline: none;
+  height: 42px;
+  width: 275px;
+  left: 0px;
+  top: 27px;
+  border-radius: 8px;
+  padding: 8px 12px 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border: 1px solid #D5D6DC;
+  font-family: 'Inter,' sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ACADB9;
+  outline: none;
 }
 
 .payment-field {
-    height: 119px;
-    width: 275px;
-    left: 0px;
-    top: 89px;
-    border-radius: 0px;
-    margin-top: 20px;
+  height: 119px;
+  width: 275px;
+  left: 0px;
+  top: 89px;
+  border-radius: 0px;
+  margin-top: 20px;
 }
 
 .payment-head {
-    height: 19px;
-    width: 52px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    font-family: 'Inter,' sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #232134;
+  height: 19px;
+  width: 52px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  font-family: 'Inter,' sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #232134;
 }
 
 .salary-from-input,
 .salary-to-input {
-    height: 42px;
-    width: 275px;
-    left: 0px;
-    top: 27px;
-    top: 0px;
-    border-radius: 8px;
-    padding: 8px 12px 8px 12px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
-    background-color: #FFFFFF;
-    border: 1px solid #D5D6DC;
-    font-family: 'Inter,' sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #ACADB9;
-    outline: none;
+  height: 42px;
+  width: 275px;
+  left: 0px;
+  top: 27px;
+  top: 0px;
+  border-radius: 8px;
+  padding: 8px 12px 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid #D5D6DC;
+  font-family: 'Inter,' sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ACADB9;
+  outline: none;
 }
 
 .applay-button {
-    height: 40px;
-    width: 275px;
-    left: 0px;
-    top: 228px;
-    border-radius: 8px;
-    padding: 4px 20px 4px 20px;
-    background-color: #5E96FC;
-    margin-top: 20px;
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #FFFFFF;
-    border: none;
+  height: 40px;
+  width: 275px;
+  left: 0px;
+  top: 228px;
+  border-radius: 8px;
+  padding: 4px 20px 4px 20px;
+  background-color: #5E96FC;
+  margin-top: 20px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
 }
 
 @media only screen and (max-width: 850px) {
-    .container-form {
-        width: 290px;
-        margin-left: 3px;
-        margin-right: 3px;
-    }
+  .container-form {
+    width: 290px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
 
-    .inner-container-form {
-        width: 250px;
-    }
+  .inner-container-form {
+    width: 250px;
+  }
 
-    .head-form {
-        width: 250px;
-    }
+  .head-form {
+    width: 250px;
+  }
 
-    .board-form {
-        width: 250px;
-    }
+  .board-form {
+    width: 250px;
+  }
 
-    .catalogues-field {
-        width: 250px;
-    }
+  .catalogues-field {
+    width: 250px;
+  }
 
-    .industry-select {
-        width: 250px;
-    }
+  .industry-select {
+    width: 250px;
+  }
 
-    .payment-field {
-        width: 250px;
-    }
+  .payment-field {
+    width: 250px;
+  }
 
-    .salary-from-input,
-    .salary-to-input {
-        width: 250px;
-    }
+  .salary-from-input,
+  .salary-to-input {
+    width: 250px;
+  }
 
-    .applay-button {
-        width: 250px;
-    }
+  .applay-button {
+    width: 250px;
+  }
 }
