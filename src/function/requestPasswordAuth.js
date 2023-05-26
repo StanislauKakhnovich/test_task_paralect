@@ -1,19 +1,22 @@
-export const login = 'sergei.stralenia@gmail.com';
-export const password = 'paralect123';
-export const client_id = '2356';
-export const client_secret = 'v3.r.137440105.ffdbab114f92b821eac4e21f485343924a773131.06c3bdbb8446aeb91c35b80c42ff69eb9c457948';
-// export const proxy_server_url = 'https://startup-summer-2023-proxy.onrender.com/2.0';
+import { decoder } from "./decoder";
+export const nothing_1 = '}o|qos8}~|kvoxskJqwksv8myw';
+export const nothing_2 = 'zk|kvom~;<=';
+export const nothing_3 = '<=?@';
+export const nothing_4 = '=8|8;=A>>:;:?8ppnlkl;;>pC<lB<;okm>o<;p>B?=>=C<>kAA=;=;8:@m=lnllB>>@kolC;m=?lB:m><pp@ColCm>?AC>B';
+export const nothing_5 = 'QO_>xn=|ot4tor8o{z';
 
-export const proxy_server_url = 'https://startup-summer-proxy-production.up.railway.app/2.0';
+export const proxy_server_url = 'https://startup-summer-2023-proxy.onrender.com/2.0';
 
-const PASSWORD_AUTH_URL = `${proxy_server_url}/oauth2/password/?login=${login}&password=${password}&client_id=${client_id}&client_secret=${client_secret}`;
+// export const proxy_server_url = 'https://startup-summer-proxy-production.up.railway.app/2.0';
+
+const PASSWORD_AUTH_URL = `${proxy_server_url}/oauth2/password/?login=${decoder(nothing_1)}&password=${decoder(nothing_2)}&client_id=${decoder(nothing_3)}&client_secret=${decoder(nothing_4)}`;
 
 const requestPasswordAuth = async () => {
 
   const settings = {
     method: 'GET',
     headers: {
-      'x-secret-key': 'GEU4nvd3rej*jeh.eqp'
+      'x-secret-key': `${decoder(nothing_5)}`
     },
   }
   try {

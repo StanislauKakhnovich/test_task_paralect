@@ -1,4 +1,5 @@
-import { client_secret, proxy_server_url } from './requestPasswordAuth';
+import { nothing_4, nothing_5, proxy_server_url } from './requestPasswordAuth';
+import { decoder } from './decoder';
 
 const requestVacancies = async (parametry) => {
   let access_token = JSON.parse(localStorage.getItem('dataToken')).access_token;
@@ -8,8 +9,8 @@ const requestVacancies = async (parametry) => {
   const settings = {
     method: 'GET',
     headers: {
-      'x-secret-key': 'GEU4nvd3rej*jeh.eqp',
-      "X-Api-App-Id": `${client_secret}`,
+      'x-secret-key': `${decoder(nothing_5)}`,
+      "X-Api-App-Id": `${decoder(nothing_4)}`,
       'Authorization': `${token_type} ${access_token}`
     },
   }

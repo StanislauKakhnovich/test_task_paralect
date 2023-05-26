@@ -1,13 +1,15 @@
-import { client_id, client_secret, proxy_server_url } from './requestPasswordAuth';
+import { nothing_3, nothing_4, nothing_5, proxy_server_url } from './requestPasswordAuth';
+import { decoder } from './decoder';
+
 
 const requestUpdateAccessToken = async (refresh_token) => {
 
-  const UPDATE_ACCESS_TOKEN_URL = `${proxy_server_url}/oauth2/refresh_token/?refresh_token=${refresh_token}&client_id=${client_id}&client_secret=${client_secret}`;
+  const UPDATE_ACCESS_TOKEN_URL = `${proxy_server_url}/oauth2/refresh_token/?refresh_token=${refresh_token}&client_id=${decoder(nothing_3)}&client_secret=${decoder(nothing_4)}`;
 
   const settings = {
     method: 'GET',
     headers: {
-      'x-secret-key': 'GEU4nvd3rej*jeh.eqp'
+      'x-secret-key': `${decoder(nothing_5)}`
     },
   }
   try {
